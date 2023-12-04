@@ -20,9 +20,13 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day${newDayNum}_test")
-    check(part1(testInput) == readInput("Day${newDayNum}_test_output").first().toInt())
+    val testInput1 = readInput("Day${newDayNum}_test_1")
+    val testInput2 = readInput("Day${newDayNum}_test_2")
 
+    check(part1(testInput1) == readInput("Day${newDayNum}_test_output_1").first().toInt())
+    check(part2(testInput2) == readInput("Day${newDayNum}_test_output_2").first().toInt())
+
+   
     val input = readInput("Day${newDayNum}")
     part1(input).println()
     part2(input).println()
@@ -33,8 +37,10 @@ fun main() {
             )
 
             File("$projectDir/src", "Day$newDayNum.txt").writeText("1")
-            File("$projectDir/src", "Day${newDayNum}_test.txt").writeText("1")
-            File("$projectDir/src", "Day${newDayNum}_test_output.txt").writeText("1")
+            File("$projectDir/src", "Day${newDayNum}_test_1.txt").writeText("1")
+            File("$projectDir/src", "Day${newDayNum}_test_output_1.txt").writeText("1")
+            File("$projectDir/src", "Day${newDayNum}_test_2.txt").writeText("1")
+            File("$projectDir/src", "Day${newDayNum}_test_output_2.txt").writeText("1")
         }
     }
 }
